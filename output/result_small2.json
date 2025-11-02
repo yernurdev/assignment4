@@ -1,0 +1,80 @@
+{
+  "scc_components": [
+    {
+      "vertices": [
+        6
+      ],
+      "size": 1
+    },
+    {
+      "vertices": [
+        5
+      ],
+      "size": 1
+    },
+    {
+      "vertices": [
+        4
+      ],
+      "size": 1
+    },
+    {
+      "vertices": [
+        3
+      ],
+      "size": 1
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "size": 3
+    }
+  ],
+  "scc_count": 5,
+  "topo_order_components": [
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "topo_order_tasks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "dag_shortest_paths": {
+    "source_component": 3,
+    "dist": [
+      5,
+      4,
+      2,
+      0,
+      "INF"
+    ],
+    "path_to_last_component": [
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  "dag_longest_path": {
+    "start_component": 3,
+    "end_component": 0,
+    "length": 5,
+    "critical_path_components": [
+      3,
+      2,
+      1,
+      0
+    ]
+  }
+}
