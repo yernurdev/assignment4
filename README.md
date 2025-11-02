@@ -91,12 +91,15 @@ DAA_4/
 │  ├─ medium.json
 │  ├─ large.json
 │  ├─ small2.json
+      small3.json
 │  ├─ medium2.json
-│  └─ large3.json
+      medium3.json
+│  └─ large2.json
+      large3.json
 ├─ output/
-│  ├─ result_small.json
-│  ├─ result_medium.json
-│  └─ result_large.json
+│  ├─ result_small1(2)(3).json
+│  ├─ result_medium1(2)(3).json
+│  └─ result_large1(2)(3).json
 ├─ src/
 │  ├─ main/java/org/example/
 │  │  ├─ Main.java
