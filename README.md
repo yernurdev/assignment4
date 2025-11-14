@@ -9,14 +9,6 @@ Consolidate two course topics in one practical case **“Smart City / Smart Camp
 
 ---
 
-## Scenario
-
-You receive datasets for city-service tasks (street cleaning, repairs, camera/sensor maintenance) and internal analytics subtasks.  
-Some dependencies are **cyclic** (must be detected and compressed into SCCs), while others are **acyclic** (can be planned optimally).  
-Separate subtasks use standard **dynamic programming (DP)** patterns.
-
----
-
 ## Implemented Algorithms
 
 ### 1) Graph Tasks
@@ -59,7 +51,7 @@ All input graphs are stored under the `/data` folder.
 | **Medium**| 10–20      | Mixed structures, several SCCs            |        3 |
 | **Large** | 20–50      | Performance and timing tests              |        3 |
 
-Total: **9 datasets** per student
+Total: **9 datasets** 
 
 All graphs vary in:
 - Density (sparse vs. dense)
@@ -152,7 +144,7 @@ mvn test
 ```
 ##  Results & Analysis (from generated `output/result_*.json`)
 
-Below is a concise summary computed from the JSON outputs you provided.
+Below is a concise summary computed from the JSON.
 
 ---
 
@@ -180,9 +172,6 @@ Below is a concise summary computed from the JSON outputs you provided.
 | **S1** (9 nodes; two 3-cycles + singles) | 9 | 5 | 3 | 5 | **8** | **1.00** |
 | **S2** (7 nodes; 3-cycle + singles) | 7 | 5 | 3 | 5 | **5** | **0.80** |
 
-\*Labels (**L1/L2/M1/M2/S1/S2**) are for readability here;  
-in your repo they correspond to the actual `result_*.json` files.
-
 ---
 
 ###  Key Observations
@@ -209,22 +198,6 @@ in your repo they correspond to the actual `result_*.json` files.
 
 ---
 
-###  Practical Recommendations
-
-1. **Always perform SCC compression** before planning — cyclic dependencies must be treated as atomic blocks.
-2. **Use topological ordering** to determine safe execution order after SCC condensation.
-3. **If reachability is low**, review the chosen source or graph connectivity to ensure the analysis covers all components.
-4. **To reduce total project duration (critical path):**
-  - Remove redundant dependencies
-  - Increase task parallelism
-  - Adjust or optimize edge weights
-5. **For deeper performance analysis**, include timing metrics and counters:
-  - SCC → DFS visits / edges
-  - Kahn → pushes / pops / relaxations
-  - DAG-SP → number of relaxations per edge  
-    *(Append to the `out` map in `Main.java` before writing results for richer profiling.)*
-
----
 
 ###  Example Result Excerpt
 
